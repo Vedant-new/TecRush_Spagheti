@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Tracker</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        *{
-            box-sizing: border-box;
-            padding: 0px;
-            margin: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+   
 </head>
 <body>
     <nav class="navigation">
@@ -22,19 +17,61 @@
             <input type="text" placeholder=" 🔍 Search Stocks ...">
         </div>
         <div class="sideicon" style="font: italic;">
-            <a href="#">Index</a>
-            <a href="#">Stock</a>
-            <a href="#">News</a>
+            <button id="theme-toggle">Mode</button>
             <a href="#">Account</a>
         </div>
     </nav>
-    <main>
-        <div class="background">
-            <div class="overlay">
+    <main id="main">
+       
+      
+           <div class="Hero">
+              <div class="text">
+              <H1>Stock Tracker</H1>
+              <p>
+                Keep track on the stock of all over the world.
+                Access the crypto.Start your trading journy with the stock tracker,
+                and dive deep into the world of stock market.
+                Stay updated with real-time charts, price changes, and company trends.
+                 Powered by Twelve Data API.
+              </p>
+              </div>
+              <div class="chart">
+                <H1>Chart</H1>
+                <canvas id="my-chart"></canvas>
 
-            </div>
+              </div>
+              </div>   
+              <div>
+                <H1>
+                 Top Gainers:
+                </H1>
+              </div>  
+              <div class="gainers">
+                <a href="#">Tata</a>
+                <a href="#">Reliance</a>
+                <a href="#">Apple</a>
+                <a href="#">Zomato</a>
+              </div>  
+              <div>
+                <H1>
+                    Top losers:
+                </H1>
+              </div>
+              <div class="losers">
+                <a href="#">abcd</a>
+                <a href="#">abcd</a>
+                <a href="#">abcd</a>
+                <a href="#">abcd</a>
+              </div>    
+    </main>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+       <script src="script.js"></script>
+       <script src="mode.js"></script>
+</body>
+</html>
         </div>
     </main>
     
 </body>
+
 </html>
