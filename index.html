@@ -1,77 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="news.css">
+  <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"></script>
 
-   
 </head>
+
 <body>
-    <nav class="navigation">
-        <div class="Name">Stock Tracker</div>
+  <div class="background">
+   <nav class="navigation">
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
-        <div class="Search_bar">
-            <input type="text" placeholder=" 🔍 Search Stocks ...">
-        </div>
-        <div class="sideicon" style="font: italic;">
-            <button id="theme-toggle">Mode</button>
-            <a href="#">Account</a>
-        </div>
-    </nav>
-    <main id="main">
+  <div class="left-section">
+    <div class="icon">
+      <lord-icon
+        src="https://cdn.lordicon.com/fohwdkeq.json"
+        trigger="hover"
+        colors="primary:#4be1ec,secondary:#3080e8">
+      </lord-icon>
+    </div>
+    <div class="Name">StockWatch</div>
+  </div>
+
+  <div class="Search_bar">
+    <button onclick="window.location.href='new.html';">Click to search any stock</button>
+  </div>
+
+  <div class="sideicon">
+    <button id="theme-toggle">Theme</button>
+    <button onclick="window.location.href='login.html';">Account</button>
+  </div>
+</nav>
+
+
+
+    <section class="Hero">
+      <div class="Hero-text">
+        <h1>Track the Market</h1>
+        <p>Stay updated with real-time prices, gainers, and losers.
+          StockTrackr is a powerful and user-friendly platform designed to keep you up-to-date with real-time stock
+          market data. Whether you're an investor, trader, or simply market-curious, our site offers easy search
+          functionality to view detailed stock price charts and trends. Additionally, you can quickly explore the day's
+          top gainers and losers, helping you spot opportunities at a glance. With an intuitive interface and
+          customizable themes, StockTrackr makes monitoring the market simple, fast, and accessible from anywhere.
+        </p>
+      </div>
+      <div class="Hero-chart">
        
-      
-           <div class="Hero">
-              <div class="text">
-              <H1>Stock Tracker</H1>
-              <p>
-                Keep track on the stock of all over the world.
-                Access the crypto.Start your trading journy with the stock tracker,
-                and dive deep into the world of stock market.
-                Stay updated with real-time charts, price changes, and company trends.
-                 Powered by Twelve Data API.
-              </p>
-              </div>
-              <div class="chart">
-                <H1>Chart</H1>
-                <canvas id="my-chart"></canvas>
 
-              </div>
-              </div>   
-              <div>
-                <H1>
-                 Top Gainers:
-                </H1>
-              </div>  
-              <div class="gainers">
-                <a href="#">Tata</a>
-                <a href="#">Reliance</a>
-                <a href="#">Apple</a>
-                <a href="#">Zomato</a>
-              </div>  
-              <div>
-                <H1>
-                    Top losers:
-                </H1>
-              </div>
-              <div class="losers">
-                <a href="#">abcd</a>
-                <a href="#">abcd</a>
-                <a href="#">abcd</a>
-                <a href="#">abcd</a>
-              </div>    
-    </main>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-       <script src="script.js"></script>
-       <script src="mode.js"></script>
-</body>
-</html>
+<dotlottie-wc
+  src="https://lottie.host/f80e3555-e9a3-4a80-8263-a0037aef015f/NKWKRKMscF.lottie"
+  style="width: 500px; height: 500px;"
+  speed="1"
+  autoplay
+  loop>
+</dotlottie-wc>
+
+    </section>
+      <section id="news-section">
+  <h1>Latest Stock Market News</h1>
+<div id="news-list" class="news-container"></div>
+
+  </ul>
+</section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+
+        <div class="footer-section">
+          <h4>About</h4>
+          <p>StockTrackr is your go-to platform for real-time stock monitoring, analysis, and insights.</p>
         </div>
-    </main>
-    
+
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:support@stocktracker.com">support@stocktracker.com</a></p>
+          <p>Phone: +91 00000 00000</p>
+          <p>Location: Mumbai, India</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" title="Website">🌐</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="Facebook">📘</a>
+            <a href="#" title="Instagram">📸</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 StockTrackr. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="news.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mode.js"></script>
+
+
 </body>
 
 </html>
