@@ -1,8 +1,8 @@
-const apiKey = 'YOUR_ALPHA_VANTAGE_API_KEY'; // Replace with your real API key
+const apiKey = 'IHEQIZJL1IFW6UZG'; 
 
 let searchChart, gainersChart, losersChart;
 
-// Fetch stock time series (INTRADAY)
+
 async function fetchIntradayData(symbol) {
   const url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=${symbol}&interval=5min&apikey=${apiKey}`;
 
@@ -21,7 +21,7 @@ async function fetchIntradayData(symbol) {
 function renderChart(canvasId, labels, data, label = "Price") {
   const ctx = document.getElementById(canvasId);
 
-  // Destroy previous chart if exists
+ 
   if (canvasId === "search-chart" && searchChart) searchChart.destroy();
   if (canvasId === "gainers-chart" && gainersChart) gainersChart.destroy();
   if (canvasId === "losers-chart" && losersChart) losersChart.destroy();
@@ -63,7 +63,7 @@ document.getElementById("search-btn").addEventListener("click", async () => {
   } catch (err) {
     console.error("Error fetching stock data:", err);
 
-    // Fallback: display dummy chart
+  
     const mockLabels = ['9:30', '9:35', '9:40', '9:45', '9:50', '9:55'];
     const mockPrices = [120, 122, 121, 123, 124, 122.5];
     renderChart("search-chart", mockLabels, mockPrices, `Mock Data (${symbol})`);
@@ -73,8 +73,7 @@ document.getElementById("search-btn").addEventListener("click", async () => {
 });
 
 async function fetchTopGainersLosers() {
-  // Alpha Vantage doesn't provide gainers/losers API in free plan
-  // We'll simulate them with mock data
+
 
   const gainers = [
     { symbol: "AAPL", price: 175.2, change: "+2.5%" },
@@ -116,7 +115,7 @@ function updateTopStocksUI({ gainers, losers }) {
       </tr>`;
   });
 
-  // Render gainers/losers chart (mock)
+  
   renderChart(
     "gainers-chart",
     gainers.map(s => s.symbol),
@@ -142,3 +141,4 @@ async function init() {
 }
 
 init();
+
